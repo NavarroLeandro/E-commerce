@@ -11,3 +11,18 @@ main {
   flex-grow: 1;
 }
 
+
+/*Dispositivos pequeños*/
+@media all and (min-width: 375px) {
+  #carouselExampleSlidesOnly {
+    font-size: 0.7rem;
+  }
+}
+
+/*Dispositivos medianos*/
+@media all and (min-width: 768px) {
+  #carouselExampleSlidesOnly {
+    font-size: .9rem;
+    padding: .5rem;
+  }
+}
