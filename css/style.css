@@ -44,6 +44,18 @@ main {
     border-color: transparent;
     border-radius: 0;
   }
+  /*con esto doy estilo al boton del formulario de ofertas*/
+  footer button {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 0.8rem;
+    width: 6rem;
+  }
+  /*quita el estilo de lista*/
+  footer ul {
+    list-style: none;
+  }
 
 }
 
