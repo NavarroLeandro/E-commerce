@@ -44,3 +44,12 @@ main {
     padding: .5rem;
   }
 }
+
+/*Dispositivos grandes*/
+@media all and (min-width: 1200px) {
+
+  /*con esta clase alineo el nav*/
+  .paddingNav {
+    padding-left: 16%;
+  }
+}
