@@ -58,6 +58,10 @@ main {
     list-style: none;
   }
 
+  .espacioLetras{
+    letter-spacing: 0.4rem;
+  }
+
 }
 
 /*Dispositivos medianos*/
