@@ -35,6 +35,16 @@ main {
     font-size: xx-large;
   }
 
+  /*con esto quito los bordes redondeados a los botones del navbar*/
+  .dropdown-menu {
+    border-radius: 0 !important;
+  }
+
+  .navbar-toggler {
+    border-color: transparent;
+    border-radius: 0;
+  }
+
 }
 
 /*Dispositivos medianos*/
