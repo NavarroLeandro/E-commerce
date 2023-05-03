@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
 
 body {
   min-height: 100vh;
@@ -17,6 +18,17 @@ main {
   #carouselExampleSlidesOnly {
     font-size: 0.7rem;
   }
+
+  .iconosDelNav a {
+    color: black;
+    font-size: 1.8rem;
+    margin-left: 0.5rem;
+  }
+
+  .fuenteLogo {
+    font-family: 'Bokor', cursive;
+  }
+
 }
 
 /*Dispositivos medianos*/
