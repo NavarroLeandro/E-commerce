@@ -18,15 +18,21 @@ main {
   #carouselExampleSlidesOnly {
     font-size: 0.7rem;
   }
-
+  /*cambia el tamaño y el color de los iconos del nav*/
   .iconosDelNav a {
     color: black;
     font-size: 1.8rem;
     margin-left: 0.5rem;
   }
-
+  /*cambia la fuente del logo*/
   .fuenteLogo {
     font-family: 'Bokor', cursive;
+  }
+  /*cambia el color y el tamaño del logo*/
+  .logo {
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
   }
 
 }
