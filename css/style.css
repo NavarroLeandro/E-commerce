@@ -81,3 +81,13 @@ main {
     padding-left: 16%;
   }
 }
+
+section figure {
+  height: 500px; /* establecer la altura del contenedor */
+  overflow: hidden; /* ocultar el exceso de la imagen */
+}
+
+section img {
+  height: 100%; /* hacer que la imagen ocupe el 100% del contenedor */
+  object-fit: cover; /* recortar la imagen para que cubra el contenedor */
+}
