@@ -91,3 +91,11 @@ section img {
   height: 100%; /* hacer que la imagen ocupe el 100% del contenedor */
   object-fit: cover; /* recortar la imagen para que cubra el contenedor */
 }
+
+.modal-content {
+  border-radius: 0;
+}
+
+.btn {
+  border-radius: 0;
+}
