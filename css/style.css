@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
 
 body {
   min-height: 100vh;
@@ -11,3 +12,72 @@ main {
   flex-grow: 1;
 }
 
+
+/*Dispositivos pequeños*/
+@media all and (min-width: 375px) {
+  /*con esto cambio el tamaño del banner superior de publicidad*/
+  #carouselExampleSlidesOnly {
+    font-size: 0.7rem;
+  }
+  /*cambia el tamaño y el color de los iconos del nav*/
+  .iconosDelNav a {
+    color: black;
+    font-size: 1.8rem;
+    margin-left: 0.5rem;
+  }
+  /*cambia la fuente del logo*/
+  .fuenteLogo {
+    font-family: 'Bokor', cursive;
+  }
+  /*cambia el color y el tamaño del logo*/
+  .logo {
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
+  }
+
+  /*con esto quito los bordes redondeados a los botones del navbar*/
+  .dropdown-menu {
+    border-radius: 0 !important;
+  }
+
+  .navbar-toggler {
+    border-color: transparent;
+    border-radius: 0;
+  }
+  /*con esto doy estilo al boton del formulario de ofertas*/
+  footer button {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 0.8rem;
+    width: 6rem;
+  }
+  /*quita el estilo de lista*/
+  footer ul {
+    list-style: none;
+  }
+
+  .espacioLetras{
+    letter-spacing: 0.4rem;
+  }
+
+}
+
+/*Dispositivos medianos*/
+@media all and (min-width: 768px) {
+  /*con esto cambio el tamaño del banner superior de publicidad*/
+  #carouselExampleSlidesOnly {
+    font-size: .9rem;
+    padding: .5rem;
+  }
+}
+
+/*Dispositivos grandes*/
+@media all and (min-width: 1200px) {
+
+  /*con esta clase alineo el nav*/
+  .paddingNav {
+    padding-left: 16%;
+  }
+}
