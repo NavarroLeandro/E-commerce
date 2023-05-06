@@ -98,123 +98,123 @@
     <!--banner principal-->
     <section>
       <figure class="w-100">
-        <img src="../img/Inspiración-Meier-panoramica.jpg" alt="Estante con ropa y modelos de prendas" class="w-100 img-fluid">
+        <img src="../img/Inspiración-Meier-panoramica.jpg" alt="Estante con ropa y modelos de prendas"
+          class="w-100 img-fluid">
       </figure>
     </section>
-    <section class="container">
+    <section class="container pt-3">
       <h2 class="display-4 text-center">AÑADIR O REMOVER PRODUCTOS DEL CATALOGO</h2>
-      <p class="display-6 text-center"><b>Agregar:</b> <button class="btn btn-outline-dark" id="btnAgregar" data-bs-toggle="modal" data-bs-target="#modalAgregar"><i class="bi bi-clipboard-plus-fill"></i></button></p>
+      <p class="display-6 text-center"><b>Agregar:</b> <button class="btn btn-outline-dark" id="btnAgregar"
+          data-bs-toggle="modal" data-bs-target="#modalAgregar"><i class="bi bi-clipboard-plus-fill"></i></button></p>
     </section>
     <section class=" container my-5">
       <p class="display-6 text-center"><b>LISTA COMPLETA<b></p>
       <hr>
       <div class="table-responsive">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-          <th>#</th>
-          <th>Nombre</th>
-          <th>Descripcion</th>
-          <th>Talles Disponibles</th>
-          <th>Acciones</th>
-        </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>1</th>
-            <td>Zapatillas converse offwhite</td>
-            <td class="text-truncate">Zapatillas casual, estilo urbano, muy coquetas.</td>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <th>Talles Disponibles</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>Zapatillas converse offwhite</td>
+              <td class="text-truncate">Zapatillas casual, estilo urbano, muy coquetas.</td>
 
-            <td>Del 38 al 46</td>
-            <td><button class="bi bi-pencil-square btn btn-dark" id="btnEditar"></button> <button class="bi bi-x-square btn btn-dark"></button></td>
-          </tr>
-          <tr>
-            <th>2</th>
-            <td>Buzos Oversize</td>
-            <td class="text-truncate">Buzos frizados ideales para el invierno.</td>
+              <td>Del 38 al 46</td>
+              <td><button class="bi bi-pencil-square btn btn-dark" id="btnEditar"></button> <button
+                  class="bi bi-x-square btn btn-dark"></button></td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>Buzos Oversize</td>
+              <td class="text-truncate">Buzos frizados ideales para el invierno.</td>
 
-            <td>De XS al XLL</td>
-            <td><button class="bi bi-pencil-square btn btn-dark"></button> <button class="bi bi-x-square btn btn-dark"></button></td>
-          </tr>
-          <tr>
-            <th>3</th>
-            <td>Short estilo Casual Nigth Flama</td>
-            <td class="text-truncate">Alto short cumpa, posta la enamoras a la jesica judith</td>
+              <td>De XS al XLL</td>
+              <td><button class="bi bi-pencil-square btn btn-dark"></button> <button
+                  class="bi bi-x-square btn btn-dark"></button></td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>Short estilo Casual Nigth Flama</td>
+              <td class="text-truncate">Alto short cumpa, posta la enamoras a la jesica judith</td>
 
-            <td>De S a XL</td>
-            <td><button class="bi bi-pencil-square btn btn-dark"></button> <button class="bi bi-x-square btn btn-dark"></button></td>
-          </tr>
-          <tr>
-            <th>4</th>
-            <td>Campera polar amateur Fuego Fox Moto enduro</td>
-            <td class="text-truncate">La campera es unica, como vos (y su talle)</td>
+              <td>De S a XL</td>
+              <td><button class="bi bi-pencil-square btn btn-dark"></button> <button
+                  class="bi bi-x-square btn btn-dark"></button></td>
+            </tr>
+            <tr>
+              <th>4</th>
+              <td>Campera polar amateur Fuego Fox Moto enduro</td>
+              <td class="text-truncate">La campera es unica, como vos (y su talle)</td>
 
-            <td>Talle unico</td>
-            <td><button class="bi bi-pencil-square btn btn-dark"></button> <button class="bi bi-x-square btn btn-dark"></button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    </section>
-  <section class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="agregarModalLabel" aria-hidden="true">
-    <article class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="agregarModalLabel">Administrar prendas</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="formAdministrarPrenda">
-            <div class="mb-3">
-              <label for="recipient-name" class="col-form-label">Código</label>
-              <input type="text" class="form-control" id="codigo" placeholder="AUTOCOMPLETADO" disabled>
-            </div>
-            <div class="mb-3">
-              <label class="col-form-label">Nombre prenda</label>
-              <input type="text" class="form-control" id="titulo" required placeholder="Ej: Zapatillas">
-            </div>
-            <div class="mb-3">
-              <label class="col-form-label">Descripcion *</label>
-              <input type="text" class="form-control" id="descripcion" required placeholder="Ej: Ropa para salir de noche">
-            </div>
-            <div class="mb-3">
-              <label class="col-form-label">Imagen *</label>
-              <input type="text" class="form-control" id="imagen" required placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html">
-            </div>
-            <div class="mb-3">
-              <label class="col-form-label">Talles disponibles *</label>
-              <input type="text" class="form-control" id="imagen" required placeholder="Ej: De Xs a XLL">
-            </div>
-            <div class="mb-3">
-              <label class="col-form-label">Año de lanzamiento</label>
-              <input type="text" class="form-control" id="anio" placeholder="Ej: 2023">
-            </div>
-            <div class="mb-3">
-              <label class="col-form-label">Marca *</label>
-              <input type="text" class="form-control" id="duracion" required placeholder="Ej: Gucci">
-            </div>
-            <div class="mb-3">
-              <label class="col-form-label">Precio *</label>
-              <input type="text" class="form-control" id="pais"  required placeholder="Ej: $20.000">
-            </div>
-            <div class="d-flex justify-content-center">
-              <button type="submit" class="btn btn-dark">Enviar</button>
-            </div>
-            
-            <div class="alert alert-danger mt-3 d-none" role="alert" id="msjFormulario">
-            </div>
-          </form>
-        </div>
+              <td>Talle unico</td>
+              <td><button class="bi bi-pencil-square btn btn-dark"></button> <button
+                  class="bi bi-x-square btn btn-dark"></button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </article>
+    </section>
+    <section class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="agregarModalLabel" aria-hidden="true">
+      <article class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="agregarModalLabel">Administrar prendas</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formAdministrarPrenda">
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Código</label>
+                <input type="text" class="form-control" id="codigo" placeholder="AUTOCOMPLETADO" disabled>
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label">Nombre prenda</label>
+                <input type="text" class="form-control" id="titulo" required placeholder="Ej: Zapatillas">
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label">Descripcion *</label>
+                <input type="text" class="form-control" id="descripcion" required
+                  placeholder="Ej: Ropa para salir de noche">
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label">Imagen *</label>
+                <input type="text" class="form-control" id="imagen" required
+                  placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html">
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label">Talles disponibles *</label>
+                <input type="text" class="form-control" id="imagen" required placeholder="Ej: De Xs a XLL">
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label">Año de lanzamiento</label>
+                <input type="text" class="form-control" id="anio" placeholder="Ej: 2023">
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label">Marca *</label>
+                <input type="text" class="form-control" id="duracion" required placeholder="Ej: Gucci">
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label">Precio *</label>
+                <input type="text" class="form-control" id="pais" required placeholder="Ej: $20.000">
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-dark">Enviar</button>
+              </div>
 
-  </section>
-  <section class="container">
-    <hr>
-  </section>
-    <section class="container text-center border-bottom pb-5">
-      <h2 class="display-2">ROPA SIN GÉNERO.</h2>
-      <h6 class="display-6">Diseñada para seres humanos.</h6>
+              <div class="alert alert-danger mt-3 d-none" role="alert" id="msjFormulario">
+              </div>
+            </form>
+          </div>
+        </div>
+      </article>
     </section>
   </main>
   <footer class="container">
