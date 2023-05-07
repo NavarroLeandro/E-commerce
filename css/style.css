@@ -97,82 +97,6 @@ main {
   padding-bottom: 5%;
   padding-top: 1%;
 }
-
-.dropdownDetalles{
-  min-width: 15em;
-  position: relative;
-  margin: 2em;
-}
-.dropdownDetalles * {
-  box-sizing: border-box;
-}
-.selectt{
-  background:#000000;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px #252525 solid;
-  border-radius: 0.5em;
-  padding: 1em;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.selectt-clicked{
-  border: 2px #b0b0b0 solid;
-  box-shadow: 0 0 0.8em #b0b0b0;
-}
-.selectt:hover {
-  background: #171616;
-}
-.caret{
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid #fff;
-  transition: 0.3s;
-}
-.caret-rotate{
-  transform: rotate(180deg);
-}
-.menu{
-  margin-top: 9px;
-  list-style: none;
-  padding: 0.2em 0.5em;
-  background: #000000;
-  border: 1px #000000 solid;
-  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-  border-radius: 0.5em;
-  color: #9fa5b5;
-  position: absolute;
-  top: 3em;
-  left: 50%;
-  width: 100%;
-  transform: translateX(-50%);
-  opacity: 0;
-  display: none;
-  transition: 0.2s;
-  z-index: 1;
-}
-.menu li {
-  padding: 0.7em 0.5em;
-  margin: 0.3em 0;
-  border-radius: 0.5em;
-  cursor: pointer;
-}
-.menu li:hover{
-  background: #171616 ;
-}
-.activo{
-  background: #171616;
-}
-.menu-open{
-  display: block;
-  opacity: 1;
-}
-
 #flechasDetalles{
   margin-right: 20px;
 }
@@ -220,3 +144,56 @@ main {
 #envioDetalles{
   display: flex;
 }
+.dropdownDetalles{
+  width: 300px;
+  margin: 10px ;
+}
+.selecccion-btn{
+  height: 30px ;
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 2px;
+  background: #000000;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+.selecccion-btn i{
+  font-size: 15px;
+  transition: transform 0.3s linear;
+}
+.dropdownDetalles.active .selecccion-btn i{
+  transform: rotate(-180deg);
+} 
+.content{
+  display: none;
+  padding: 5px;
+  margin-top: 7px;
+  border-radius: 2px;
+  background: #ffffff;
+  position: relative;
+  width: 285px;
+  margin-left: 15px;
+}
+.dropdownDetalles.active .content{
+  display: block;
+} 
+.content .opcionesDetalles{
+  margin-top: 0px;
+  max-height: 130px;
+}
+.opcionesDetalles li{
+  height: 25px; 
+  font-size: 13px;
+  border-radius: 5px;
+  list-style:none;
+  cursor: pointer;
+  align-items: center;
+  color: #000000;
+}
+.opcionesDetalles li:hover{
+  background:#ffffff;
+}
+
+

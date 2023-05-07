@@ -1,33 +1,22 @@
-const dropdowns = document.querySelectorAll('.dropdownDetalles');
+const dropdownDetalles = document.querySelector('.dropdownDetalles'),
+selectBtn = dropdownDetalles.querySelector('.selecccion-btn'),
+options = dropdownDetalles.querySelector('.opcionesDetalles');
 
-dropdowns.forEach(dropdownDetalles => {
-
-    const select = dropdownDetalles.querySelector('.selectt');
-    const caret = dropdownDetalles.querySelector('.caret');
-    const menu = dropdownDetalles.querySelector('.menu');
-    const options = dropdownDetalles.querySelector('.menu li');
-    const selected = dropdownDetalles.querySelector('.selected');
-
-
-
-    select.addEventListener('click', () => {
-        select.classList.toggle('selectt-clicked');
-        caret.classList.toggle('caret-rotate');
-        menu.classList.toggle('menu-open');
+let talles = ["TALLE S","TALLE M","TALLE L","TALLE XL","TALLE XXL","TALLE 3XL"]
+ 
+function agregarTalle() {
+    talles.forEach(talle => {
+        let li = `<li onclick="cambiarNombre(this)">${talle}</li>`;
+        options.insertAdjacentHTML("beforeend", li);
     });
+}
+agregarTalle();
 
+function cambiarNombre(selectedLi) {
+    dropdownDetalles.classList.remove('active');
+    selectBtn.firstElementChild.innerText = selectedLi.innerText;
+}
 
-    options.forEach(option => {
-        option.addEventListener('click',() => {
-            selected.innerText = option.innerText;
-            select.classList.remove('selectt-clicked');
-            caret.classList.remove('caret-rotate');
-            menu.classList.remove('menu-open');
-            options.forEach(option => {
-                option.classList.remove('activo');
-            });
-            
-            option.classList.add('activo');
-          });
-        });
-      });
+selectBtn.addEventListener('click', () => {
+    dropdownDetalles.classList.toggle('active');
+});
