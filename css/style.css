@@ -61,7 +61,16 @@ main {
   .espacioLetras{
     letter-spacing: 0.4rem;
   }
-
+  /*pagina de detalles*/
+  #envioDetalles{
+    font-size: small;
+  }
+  #cuotasDetalles{
+    font-size: small;
+  }
+  #contenedor-detalles article figure {
+    width: 100%;
+  }
 }
 
 /*Dispositivos medianos*/
@@ -70,6 +79,16 @@ main {
   #carouselExampleSlidesOnly {
     font-size: .9rem;
     padding: .5rem;
+  }
+  /*pagina de detalles*/
+  #envioDetalles{
+    font-size: medium;
+  }
+  #cuotasDetalles{
+    font-size: medium;
+  }
+  #contenedor-detalles article figure {
+    width: 100%;
   }
 }
 
@@ -90,13 +109,7 @@ main {
   border-radius: 0;
 }
 
-
-#contenedor-detalles{
-  display: flex;
-  padding-left: 5%;
-  padding-bottom: 5%;
-  padding-top: 1%;
-}
+/*PARTE DE DETALLES*/
 #flechasDetalles{
   margin-right: 20px;
 }
@@ -135,18 +148,17 @@ main {
   opacity: 1;
   transition: 0s
 }
-#contenedor-detalles-derecha{
-  width: 60%;
-}
 #cuotasDetalles{
   display: flex;
 }
 #envioDetalles{
   display: flex;
+  justify-content: start;
+  font-size: ;
 }
 .dropdownDetalles{
   width: 300px;
-  margin: 10px ;
+  margin-bottom: 1em;
 }
 .selecccion-btn{
   height: 30px ;
@@ -195,5 +207,3 @@ main {
 .opcionesDetalles li:hover{
   background:#ffffff;
 }
-
-
