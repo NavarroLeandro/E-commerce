@@ -153,8 +153,7 @@ main {
 }
 #envioDetalles{
   display: flex;
-  justify-content: start;
-  font-size: ;
+  justify-content: start; 
 }
 .dropdownDetalles{
   width: 300px;
