@@ -107,9 +107,33 @@
                      <ul class="opcionesDetalles"></ul>
                  </div>   
              </div>
+             <div class="modal fade" id="comoMedirseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="../img/comoMeMido.png" alt="" class="w-100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+             <div class="modal fade" id="guiaDeTallesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="../img/remerasDetalles/guiaDeTallesRemeraHospitalPlanetario.jpg" alt="" class="w-100">
+                    </div>
+                  </div>
+                </div>
+              </div>
              <div id="talles">
-             <a href=""></button><button type="button" class="btn ms-3 btn-sm mb-1 "><i class="bi bi-zoom-in" id="lupaDetalles"></i>VER GUIA DE TALLES</button></a>
-             <a href=""><button type="button" class="btn ms-3 btn-sm mb-1"><i class="bi bi-arrows-angle-expand" id="flechasDetalles"></i>COMO ME MIDO</button></a>
+             <button type="button" class="btn ms-3 btn-sm mb-1" data-bs-target="#guiaDeTallesModal" data-bs-toggle="modal"><i class="bi bi-zoom-in" id="lupaDetalles"></i>VER GUIA DE TALLES</button>
+             <button type="button" class="btn ms-3 btn-sm mb-1" data-bs-target="#comoMedirseModal" data-bs-toggle="modal"><i class="bi bi-arrows-angle-expand" id="flechasDetalles"></i>COMO ME MIDO</button>
             </div>
             
             <button type="button" id="botonDetalles" class="ms-4 mt-3">AGREGAR AL CARRITO</button>
