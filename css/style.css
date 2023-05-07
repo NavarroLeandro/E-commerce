@@ -89,3 +89,12 @@ main {
 .btn {
   border-radius: 0;
 }
+
+
+.card {
+  height: 300px; /* Altura fija para las cards */
+}
+
+.card-img-top {
+  object-fit: cover;
+}
