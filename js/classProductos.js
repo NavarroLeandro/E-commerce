@@ -1,4 +1,4 @@
-export default class Pelicula{
+export default class producto{
     #codigo;
     #nombrePrenda;
     #descripcion;
