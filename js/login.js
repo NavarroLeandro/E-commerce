@@ -1,25 +1,65 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Obtener el formulario y elementos necesarios
-  const form = document.querySelector("form");
-  const emailInput = document.getElementById("email");
-  const passwordInput = document.getElementById("pass");
+const loginForm = document.getElementById("loginForm");
+const logoutBtn = document.getElementById("logout");
+const welcomeDiv = document.getElementById("welcome");
+const successMsg = document.createElement("div");
+const successMsgContainer = document.getElementById("successMsgContainer");
 
-  // Función para validar el inicio de sesión
-  function validateLogin(event) {
-    event.preventDefault();
+successMsg.style.display = "none";
+successMsg.textContent = "Sesión iniciada correctamente";
+successMsg.classList.add("alert", "alert-success");
+successMsgContainer.appendChild(successMsg);
 
-    // Verificar si el correo electrónico y la contraseña son "admin"
-    if (
-      emailInput.value === "admin@rolling.com" &&
-      passwordInput.value === "admin123"
-    ) {
-      alert("Inicio de sesión exitoso");
-      // Redirigir a la página principal o el panel de administración aquí, si es necesario
-    } else {
-      alert("Correo electrónico o contraseña incorrectos");
-    }
+function isLoggedIn() {
+  const userData = JSON.parse(localStorage.getItem("user"));
+  if (userData && userData.expires > Date.now()) {
+    return true;
   }
+  return false;
+}
 
-  // Agregar un evento al formulario para validar el inicio de sesión al enviar
-  form.addEventListener("submit", validateLogin);
+function showLoginForm() {
+  loginForm.style.display = "block";
+  welcomeDiv.style.display = "none";
+}
+
+function showWelcomeMsg() {
+  loginForm.style.display = "none";
+  welcomeDiv.style.display = "block";
+}
+
+if (isLoggedIn()) {
+  showWelcomeMsg();
+} else {
+  showLoginForm();
+}
+
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if (email === "admin@street.com" && password === "admin123") {
+    const user = {
+      email: email,
+      expires: Date.now() + 5 * 60 * 1000,
+    };
+    localStorage.setItem("user", JSON.stringify(user));
+    showSuccessMsg();
+    setTimeout(() => {
+      window.location.href = "/index.html";
+    }, 3000);
+  } else {
+    alert("Email o contraseña incorrecta");
+  }
+});
+
+function showSuccessMsg() {
+  loginForm.style.display = "none";
+  successMsg.style.display = "block";
+}
+
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("user");
+  showLoginForm();
+  window.location.href = "/index.html";
 });
