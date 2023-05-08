@@ -25,6 +25,13 @@ function showLoginForm() {
 function showWelcomeMsg() {
   loginForm.style.display = "none";
   welcomeDiv.style.display = "block";
+
+  const adminNavItem = document.getElementById("admin-nav-item");
+  if (!isLoggedIn()) {
+    adminNavItem.style.display = "none";
+  } else {
+    adminNavItem.style.display = "block";
+  }
 }
 
 if (isLoggedIn()) {
@@ -32,6 +39,7 @@ if (isLoggedIn()) {
 } else {
   showLoginForm();
 }
+hideItemIfNotLoggedIn();
 
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -63,3 +71,12 @@ logoutBtn.addEventListener("click", () => {
   showLoginForm();
   window.location.href = "/index.html";
 });
+
+function hideItemIfNotLoggedIn() {
+  const itemToHide = document.getElementById("itemToHide");
+  if (!isLoggedIn()) {
+    itemToHide.style.display = "none";
+  } else {
+    itemToHide.style.display = "block";
+  }
+}
