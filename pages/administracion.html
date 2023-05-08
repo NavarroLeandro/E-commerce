@@ -80,9 +80,14 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contacto</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Administracion</a>
-            </li>
+            <li class="nav-item" id="itemToHide">
+                <a
+                  class="nav-link"
+                  href="./administracion.html"
+                  id="admin-nav-item"
+                  >Administracion</a
+                >
+              </li>
           </ul>
           <form class="d-flex" role="search">
             <input id="buscador" class="me-2" type="search" placeholder="Buscar" aria-label="Search" maxlength="30" />
@@ -304,6 +309,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../js/administrador.js" type="module"></script>
+  <script src="../js/verificarSesion.js"></script>
 </body>
 
 </html>
