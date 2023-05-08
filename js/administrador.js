@@ -7,7 +7,7 @@ const btnAgregar = document.querySelector("#btnAgregar");
 const nombrePrenda = document.getElementById("nombrePrenda");
 const codigo = document.getElementById("codigo");
 const descripcion = document.getElementById("descripcion");
-const anioLanzamiento = document.getElementById("anioLanzamiento");
+const anioLanzamiento = document.getElementById("anio");
 const marca = document.getElementById("marca");
 const precio = document.getElementById("precio");
 const imagen = document.getElementById("imagen");
@@ -16,7 +16,7 @@ const msjFormulario = document.getElementById("msjFormulario");
 const modalProducto = new bootstrap.Modal(
   document.querySelector("#modalAgregar")
 );
-const formularioProducto = document.getElementById("formAdministrarProducto");
+const formularioProducto = document.getElementById("formAdministrarPrenda");
 let estadoProducto = true;
 
 
@@ -30,8 +30,8 @@ if (!listaProductos) {
   listaProductos = [];
 } else {
   listaProductos = JSON.parse(listaProductos).map(
-    (producto) =>
-      new Producto(
+    (productito) =>
+      new producto(
         producto.codigo,
         producto.nombrePrenda,
         producto.descripcion,
@@ -68,7 +68,7 @@ function crearFila(producto, indice) {
     <td>${producto.talles}</td>
     <td>
         <button class="bi bi-pencil-square btn btn-warning" id="btnEditar" onclick="editarProducto('${
-            producto.anioLanzamiento
+            producto.codigo
         }')"></button>
         <button class="bi bi-x-square btn btn-danger" onclick="borrarProducto('${
             producto.codigo
@@ -110,7 +110,7 @@ function crearProducto() {
   if (sumario.length === 0) {
     console.log("creando el producto...");
     //crear la pelicula
-    let nuevoProducto = new Producto(
+    let nuevoProducto = new producto(
       undefined,
       nombrePrenda.value,
       descripcion.value,
