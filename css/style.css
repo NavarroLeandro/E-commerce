@@ -108,7 +108,6 @@ main {
 .btn {
   border-radius: 0;
 }
-
 /*PARTE DE DETALLES*/
 #flechasDetalles{
   margin-right: 20px;
@@ -206,3 +205,4 @@ main {
 .opcionesDetalles li:hover{
   background:#ffffff;
 }
+
