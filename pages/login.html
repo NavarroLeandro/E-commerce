@@ -31,7 +31,7 @@
     <title>StreetWear&REG;</title>
   </head>
 
-  <body>
+  <body onload="hideItemIfNotLoggedIn();">
     <header>
       <!--Banner con descuentos-->
       <section
@@ -122,8 +122,11 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Contacto</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./administracion.html"
+              <li class="nav-item" id="itemToHide">
+                <a
+                  class="nav-link"
+                  href="./administracion.html"
+                  id="admin-nav-item"
                   >Administracion</a
                 >
               </li>
@@ -312,5 +315,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/login.js"></script>
+    <script src="../js/verificarSesion.js"></script>
   </body>
 </html>
