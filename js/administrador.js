@@ -73,7 +73,7 @@ function crearProducto() {
   );
   if (sumario.length === 0) {
     console.log("creando el producto...");
-    //crear la pelicula
+    //crear el producto
     let nuevoProducto = new producto(
       undefined,
       nombrePrenda.value,
