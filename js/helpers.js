@@ -30,6 +30,17 @@ function validarURLImagen(value){
     }
 }
 
+function validarPrecio(precio){
+    if(precio > 50 && precio < 1000000){
+        console.log('Precio correcto');
+        return true;
+    }else{
+        console.log('precio incorrecto');
+        return false;
+    }
+}
+
+
 // function validarGenero(texto){
 //     if(texto.length > 0 && (texto === 'Aventura' || texto === 'Accion' || texto === 'Drama' || texto === 'Terror')){
 //         console.log('genero valido');
@@ -41,20 +52,20 @@ function validarURLImagen(value){
 // }
 
 // //agregar la validacion año 1985 - (año actual +1)
-// function validarAnio(value){
-//     console.log(value)
-//     const anioActual = new Date().getFullYear();
-//     if(value >= 1985 && value <= (anioActual+1)){
-//         return true
-//     }
-//     else{
-//         return false
-//     }
-// }
-// //validacion para el pais
+function validarAnio(value){
+     console.log(value)
+     const anioActual = new Date().getFullYear();
+     if(value >= 1985 && value <= (anioActual+1)){
+         return true
+     }
+     else{
+         return false
+     }
+ }
+ //validacion para el pais
 // //validacion para el Reparto
 
-export function sumarioValidaciones(titulo, descripcion, imagen, duracion, genero, anio, pais, reparto){
+export function sumarioValidaciones(titulo, descripcion, imagen, duracion, anio, pais, reparto){
     let resumen='';
     if(!cantidadCaracteres(titulo, 3, 100)){
         resumen += 'Corregir el campo del titulo debe contener entre 3 y 100 caracteres <br>';
@@ -65,21 +76,33 @@ export function sumarioValidaciones(titulo, descripcion, imagen, duracion, gener
     if(!validarURLImagen(imagen)){
         resumen += 'Corregir la URL de la imagen, la extension debe ser .jpg, .gif o .png <br>'
     }
-    if(!validarGenero(genero)){
+    /* if(!validarGenero(genero)){
         resumen += 'Seleccione un genero de la lista de opciones <br>'
-    }
+    } */
     
-    if(duracion.length !==0  && !validarDuracion(parseInt(duracion))){
+    /* if(duracion.length !==0  && !validarDuracion(parseInt(duracion))){
         resumen += 'Corregir la duracion, debe ser un numero de 3 digitos como maximo, expresado en minutos<br>'
+    } */
+    if(!cantidadCaracteres(duracion, 3, 100)){
+        resumen += 'Corregir la cantidad de caracteres de la duracion <br>'
     }
+
     if(anio.length !== 0 && !validarAnio(parseInt(anio))){
         resumen += `Ingrese un año correcto (entre 1985 y como maximo el proximo año ${new Date().getFullYear()+1}) <br>`
     }
-    if(pais.length !== 0 && !cantidadCaracteres(pais,2,30)){
+
+    /* if(pais.length !== 0 && !cantidadCaracteres(pais,2,30)){
         resumen += `Ingrese un pais correcto (debe tener un rango entre 2 y 30 caracteres como maximo)<br>`
+    } */
+    if(!cantidadCaracteres(pais, 3, 100)){
+        resumen += 'Corregir la cantidad de caracteres de pais <br>'
     }
-    if(reparto.length !== 0 && !cantidadCaracteres(reparto,2,200)){
+
+    /* if(reparto.length !== 0 && !cantidadCaracteres(reparto,2,200)){
         resumen += `Ingrese un texto correcto (debe tener un rango entre 2 y 200 caracteres como maximo) separados por coma<br>`
+    } */
+    if (!validarPrecio(reparto)) {
+        resumen += 'Corregir la cantidad de caracteres de precio <br>'
     }
 
     if(resumen.length !== 0 ){

@@ -1,5 +1,4 @@
 import producto from "./classProductos.js";
-
 import { sumarioValidaciones } from "./helpers.js";
 
 const btnEditar = document.querySelector("#btnEditar");
@@ -7,7 +6,7 @@ const btnAgregar = document.querySelector("#btnAgregar");
 const nombrePrenda = document.getElementById("nombrePrenda");
 const codigo = document.getElementById("codigo");
 const descripcion = document.getElementById("descripcion");
-const anioLanzamiento = document.getElementById("anioLanzamiento");
+const anioLanzamiento = document.getElementById("anio");
 const marca = document.getElementById("marca");
 const precio = document.getElementById("precio");
 const imagen = document.getElementById("imagen");
@@ -16,49 +15,19 @@ const msjFormulario = document.getElementById("msjFormulario");
 const modalProducto = new bootstrap.Modal(
   document.querySelector("#modalAgregar")
 );
-const formularioProducto = document.getElementById("formAdministrarProducto");
+const formularioProducto = document.getElementById("formAdministrarPrenda");
 let estadoProducto = true;
-
-
-btnAgregar.addEventListener("click", mostrarModalProducto);
-formularioProducto.addEventListener("submit", cargarProducto);
-
-
-let listaProductos = localStorage.getItem("listaProductos");
-
-if (!listaProductos) {
-  listaProductos = [];
-} else {
-  listaProductos = JSON.parse(listaProductos).map(
-    (producto) =>
-      new Producto(
-        producto.codigo,
-        producto.nombrePrenda,
-        producto.descripcion,
-        producto.imagen,
-        producto.talles,
-        producto.anioLanzamiento,
-        producto.marca,
-        producto.precio,
-      )
-  );
-}
-
-console.log(listaProductos);
+let listaProductos = JSON.parse(localStorage.getItem("listaProductos")) || [];
 
 cargaInicial();
 
 function cargaInicial() {
-
   if (listaProductos.length > 0) {
-
-    listaProductos.map((producto, indice) => crearFila(producto, indice));
+    listaProductos.forEach((producto, indice) => crearFila(producto, indice));
   }
-
 }
 
 function crearFila(producto, indice) {
-
   let datosTablaProducto = document.querySelector("tbody");
   datosTablaProducto.innerHTML += `<tr>
     <th>${indice + 1}</th>
@@ -68,7 +37,7 @@ function crearFila(producto, indice) {
     <td>${producto.talles}</td>
     <td>
         <button class="bi bi-pencil-square btn btn-warning" id="btnEditar" onclick="editarProducto('${
-            producto.anioLanzamiento
+            producto.codigo
         }')"></button>
         <button class="bi bi-x-square btn btn-danger" onclick="borrarProducto('${
             producto.codigo
@@ -79,25 +48,20 @@ function crearFila(producto, indice) {
 
 function mostrarModalProducto() {
   estadoProducto = true;
-  //abrir la ventana modal
   modalProducto.show();
   console.log("aqui vamos a crear un producto");
 }
 
 function cargarProducto(e) {
   e.preventDefault();
-
   if (estadoProducto) {
-    //aqui creo la peli
     crearProducto();
   } else {
-    //editar peli
     actualizarProducto();
   }
 }
 
 function crearProducto() {
-  //validar los datos
   let sumario = sumarioValidaciones(
     nombrePrenda.value,
     descripcion.value,
@@ -110,7 +74,7 @@ function crearProducto() {
   if (sumario.length === 0) {
     console.log("creando el producto...");
     //crear la pelicula
-    let nuevoProducto = new Producto(
+    let nuevoProducto = new producto(
       undefined,
       nombrePrenda.value,
       descripcion.value,
@@ -122,23 +86,16 @@ function crearProducto() {
     );
     listaProductos.push(nuevoProducto);
     console.log(nuevoProducto);
-
     guardarEnLocalStorage();
-
     limpiarFormularioProductos();
-
     modalProducto.hide();
-
     let indiceProducto = listaProductos.length - 1;
     crearFila(nuevoProducto, indiceProducto);
- 
-
     Swal.fire(
       "Producto creado",
       "El producto ingresado fue creado correctamente",
       "success"
     );
-
   } else {
     msjFormulario.className = "alert alert-danger mt-3";
     msjFormulario.innerHTML = sumario;
@@ -152,7 +109,6 @@ function guardarEnLocalStorage() {
 function limpiarFormularioProductos() {
   formularioProducto.reset();
 }
-
 
 window.borrarProducto = (codigo) => {
   Swal.fire({
@@ -212,6 +168,7 @@ window.editarProducto= (codigoUnico) => {
   estadoProducto= false;      
 };
 
+
 function actualizarProducto(){
 
   let posicionProducto = listaProductos.findIndex(produc => produc.codigo === codigo.value );
@@ -243,3 +200,42 @@ Swal.fire(
   //cerrar el modal
   modalProducto.hide()
 }
+
+
+btnAgregar.addEventListener("click", mostrarModalProducto);
+formularioProducto.addEventListener("submit", cargarProducto);
+
+/* if (!listaProductos) {
+  listaProductos = [];
+} else {
+  listaProductos = JSON.parse(listaProductos).map(
+    (productito) =>
+      new producto(
+        producto.codigo,
+        producto.nombrePrenda,
+        producto.descripcion,
+        producto.imagen,
+        producto.talles,
+        producto.anioLanzamiento,
+        producto.marca,
+        producto.precio,
+      )
+  );
+}
+
+console.log(listaProductos);
+
+cargaInicial(); */
+
+
+
+
+
+
+
+
+
+
+
+
+
