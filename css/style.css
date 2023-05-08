@@ -195,7 +195,6 @@ main {
 .opcionesDetalles li:hover {
   background: #ffffff;
 }
-
 /*PARTE DE DETALLES*/
 #flechasDetalles {
   margin-right: 20px;
@@ -290,6 +289,7 @@ main {
   align-items: center;
   color: #000000;
 }
-.opcionesDetalles li:hover {
-  background: #ffffff;
+.opcionesDetalles li:hover{
+  background:#ffffff;
 }
+
