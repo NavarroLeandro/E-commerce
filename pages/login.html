@@ -65,7 +65,7 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="logo fuenteLogo" href="#">
+          <a class="logo fuenteLogo" href="../index.html">
             <h1><u>StreetWear</u></h1>
           </a>
           <article class="iconosDelNav order-lg-1">
@@ -83,7 +83,10 @@
               class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1 justify-content-center paddingNav"
             >
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
                   >Inicio</a
                 >
               </li>
@@ -143,36 +146,47 @@
       </nav>
     </header>
     <div class="container login-container">
-      <img src="../img/logo.JPG" alt="Logo" class="logo" />
-      <div id="welcome" class="hidden">
-        <h2>Bienvenido Usuario</h2>
-        <button id="logout" class="btn btn-danger">Cerrar sesión</button>
+      <div class="row justify-content-center align-items-center min-vh-100">
+        <div class="col-md-6">
+          <div class="text-center mb-4">
+            <img src="../img/logo.JPG" alt="Logo" class="logo" />
+            <p>Bienvenido, si posee un usuario registrado ingrese</p>
+          </div>
+          <div id="welcome" class="hidden text-center mb-4">
+            <h2 class="fs-5">Bienvenido Usuario</h2>
+            <button id="logout" class="btn btn-danger">Cerrar sesión</button>
+          </div>
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="email" class="fs-5">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Ingresar email"
+                required
+              />
+            </div>
+            <div class="form-group mt-3">
+              <label for="password" class="fs-5">Clave</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Ingresar clave"
+                minlength="8"
+                required
+              />
+            </div>
+            <div class="text-center mt-3">
+              <button type="submit" class="btn btn-primary">
+                Iniciar sesión
+              </button>
+            </div>
+          </form>
+          <div id="successMsgContainer" class="mt-3"></div>
+        </div>
       </div>
-      <form id="loginForm">
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="Enter email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            placeholder="Enter password"
-            minlength="8"
-            required
-          />
-        </div>
-        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-      </form>
-      <div id="successMsgContainer"></div>
     </div>
     <footer class="container">
       <!--Section con contactos y formulario-->
