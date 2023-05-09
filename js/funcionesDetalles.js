@@ -1,3 +1,4 @@
+/*FUNCIONES DEL DROPDOWN DE TALLES*/
 const dropdownDetalles = document.querySelector('.dropdownDetalles'),
 selectBtn = dropdownDetalles.querySelector('.selecccion-btn'),
 options = dropdownDetalles.querySelector('.opcionesDetalles');
@@ -20,3 +21,6 @@ function cambiarNombre(selectedLi) {
 selectBtn.addEventListener('click', () => {
     dropdownDetalles.classList.toggle('active');
 });
+
+
+/*FUNCIONES DEL BOTON AGREGAR AL CARRITO*/
