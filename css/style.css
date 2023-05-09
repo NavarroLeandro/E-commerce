@@ -293,6 +293,15 @@ main {
   background:#ffffff;
 }
 
+#contenedor-secundario-categorias-productos{
+  display: flex;
+}
+#imagenes-categorias-productos{
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 <<<<<<< HEAD
 /*PAGINA DE CATEGORIAS*/
 =======
