@@ -70,6 +70,20 @@ main {
   #contenedor-detalles article figure {
     width: 100%;
   }
+
+  /*quitar borde redondeado a las cards*/
+  .card {
+    border-radius: 0;
+  }
+
+  .card img{
+    height: 28rem;
+  }
+
+  .btn{
+    border-radius: 0%;
+  }
+
 }
 
 /*Dispositivos medianos*/

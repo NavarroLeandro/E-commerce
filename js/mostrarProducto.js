@@ -2,10 +2,10 @@ import Productoo from "./classProductos.js";
 
 let listaProductos = localStorage.getItem("listaProductos");
 if (!listaProductos) {
-  //si lista peliculas no existe en Localstorage
+  //si lista productos no existe en Localstorage
   listaProductos = [];
 } else {
-  //si lista peliculas tiene datos, quiero transformarlo en un array de objetos producto
+  //si lista productos tiene datos, quiero transformarlo en un array de objetos producto
   listaProductos = JSON.parse(listaProductos).map(
     (producto) =>
       new Productoo(
@@ -42,13 +42,13 @@ function crearCard(producto) {
           <h5 class="card-title">${producto.nombrePrenda}</h5>
         </div>
         <div class="card-footer">
-            <button class="btn btn-primary" onclick="detallePelicula('${producto.codigo}')">Detalle</button>
+            <a href="../pages/error404.html" class="btn btn-dark" onclick="detalleProducto('${producto.codigo}')">Hazlo Tuyo</a>
         </div>
       </div>
     </article>`;
 }
 
-window.detallePelicula = (codigo) => {
+window.detalleProducto = (codigo) => {
   // console.log(codigo);
   console.log(window.location);
   // console.log(window.location.origin + '/pages/detalle.html?codigo='+codigo)

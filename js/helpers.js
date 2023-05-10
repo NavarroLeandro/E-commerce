@@ -8,16 +8,6 @@ export function cantidadCaracteres(texto, min, max){
     }
 }
 
-// function validarDuracion(value){
-//     let patron = /^[0-9]{1,3}$/;
-//     if(patron.test(value)){
-//         console.log('digito valido de 1 a 3 caracteres');
-//         return true;
-//     }else{
-//         console.log('no paso la expresion regular del tiempo');
-//         return false;
-//     }
-// }
 
 function validarURLImagen(value){
     let patron = /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)$/;
@@ -41,16 +31,6 @@ function validarPrecio(precio){
 }
 
 
-// function validarGenero(texto){
-//     if(texto.length > 0 && (texto === 'Aventura' || texto === 'Accion' || texto === 'Drama' || texto === 'Terror')){
-//         console.log('genero valido');
-//         return true;
-//     }else{
-//         console.log('genero invalido');
-//         return false;
-//     }
-// }
-
 // //agregar la validacion año 1985 - (año actual +1)
 function validarAnio(value){
      console.log(value)
@@ -62,8 +42,6 @@ function validarAnio(value){
          return false
      }
  }
- //validacion para el pais
-// //validacion para el Reparto
 
 export function sumarioValidaciones(titulo, descripcion, imagen, duracion, anio, pais, reparto){
     let resumen='';
@@ -76,13 +54,7 @@ export function sumarioValidaciones(titulo, descripcion, imagen, duracion, anio,
     if(!validarURLImagen(imagen)){
         resumen += 'Corregir la URL de la imagen, la extension debe ser .jpg, .gif o .png <br>'
     }
-    /* if(!validarGenero(genero)){
-        resumen += 'Seleccione un genero de la lista de opciones <br>'
-    } */
-    
-    /* if(duracion.length !==0  && !validarDuracion(parseInt(duracion))){
-        resumen += 'Corregir la duracion, debe ser un numero de 3 digitos como maximo, expresado en minutos<br>'
-    } */
+
     if(!cantidadCaracteres(duracion, 3, 100)){
         resumen += 'Corregir la cantidad de caracteres de la duracion <br>'
     }
@@ -91,16 +63,11 @@ export function sumarioValidaciones(titulo, descripcion, imagen, duracion, anio,
         resumen += `Ingrese un año correcto (entre 1985 y como maximo el proximo año ${new Date().getFullYear()+1}) <br>`
     }
 
-    /* if(pais.length !== 0 && !cantidadCaracteres(pais,2,30)){
-        resumen += `Ingrese un pais correcto (debe tener un rango entre 2 y 30 caracteres como maximo)<br>`
-    } */
+
     if(!cantidadCaracteres(pais, 3, 100)){
         resumen += 'Corregir la cantidad de caracteres de pais <br>'
     }
 
-    /* if(reparto.length !== 0 && !cantidadCaracteres(reparto,2,200)){
-        resumen += `Ingrese un texto correcto (debe tener un rango entre 2 y 200 caracteres como maximo) separados por coma<br>`
-    } */
     if (!validarPrecio(reparto)) {
         resumen += 'Corregir la cantidad de caracteres de precio <br>'
     }

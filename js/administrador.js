@@ -73,7 +73,7 @@ function crearProducto() {
   );
   if (sumario.length === 0) {
     console.log("creando el producto...");
-    //crear la pelicula
+    //crear el producto
     let nuevoProducto = new producto(
       undefined,
       nombrePrenda.value,
@@ -205,27 +205,6 @@ Swal.fire(
 btnAgregar.addEventListener("click", mostrarModalProducto);
 formularioProducto.addEventListener("submit", cargarProducto);
 
-/* if (!listaProductos) {
-  listaProductos = [];
-} else {
-  listaProductos = JSON.parse(listaProductos).map(
-    (productito) =>
-      new producto(
-        producto.codigo,
-        producto.nombrePrenda,
-        producto.descripcion,
-        producto.imagen,
-        producto.talles,
-        producto.anioLanzamiento,
-        producto.marca,
-        producto.precio,
-      )
-  );
-}
-
-console.log(listaProductos);
-
-cargaInicial(); */
 
 
 
