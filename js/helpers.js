@@ -40,6 +40,16 @@ function validarPrecio(precio){
     }
 }
 
+function validarStock(stock){
+    if(stock < 200){
+        console.log('stock correcto');
+        return true;
+    }else{
+        console.log('stock incorrecto');
+        return false;
+    }
+}
+
 
 // function validarGenero(texto){
 //     if(texto.length > 0 && (texto === 'Aventura' || texto === 'Accion' || texto === 'Drama' || texto === 'Terror')){
@@ -65,7 +75,7 @@ function validarAnio(value){
  //validacion para el pais
 // //validacion para el Reparto
 
-export function sumarioValidaciones(titulo, descripcion, imagen, duracion, anio, pais, reparto){
+export function sumarioValidaciones(titulo, descripcion, imagen, duracion, anio, pais, reparto, stock, categoria){
     let resumen='';
     if(!cantidadCaracteres(titulo, 3, 100)){
         resumen += 'Corregir el campo del titulo debe contener entre 3 y 100 caracteres <br>';
@@ -103,6 +113,14 @@ export function sumarioValidaciones(titulo, descripcion, imagen, duracion, anio,
     } */
     if (!validarPrecio(reparto)) {
         resumen += 'Corregir la cantidad de caracteres de precio <br>'
+    }
+
+    if (!validarStock(stock)) {
+        resumen += 'Corregir la cantidad de caracteres de stock <br>'
+    }
+
+    if(!cantidadCaracteres(categoria, 3, 100)){
+        resumen += 'Corregir la cantidad de caracteres de categoria <br>'
     }
 
     if(resumen.length !== 0 ){

@@ -15,7 +15,9 @@ export default class Productoo{
     #anioLanzamiento;
     #marca;
     #precio;
-    constructor(codigo = uuidv4(),nombrePrenda, descripcion, imagen, talles, anioLanzamiento, marca, precio){
+    #stock;
+    #categoria;
+    constructor(codigo = uuidv4(),nombrePrenda, descripcion, imagen, talles, anioLanzamiento, marca, precio, stock, categoria){
         this.#codigo = codigo;
         this.#nombrePrenda = nombrePrenda;
         this.#descripcion = descripcion;
@@ -24,6 +26,8 @@ export default class Productoo{
         this.#anioLanzamiento = anioLanzamiento;
         this.#marca = marca;
         this.#precio = precio;
+        this.#stock = stock;
+        this.#categoria = categoria;
     }
     // creamos los getters y setters
     // getters
@@ -51,6 +55,12 @@ export default class Productoo{
     get precio() {
         return this.#precio;
     }
+    get stock() {
+        return this.#stock;
+    }
+    get categoria() {
+        return this.#categoria;
+    }
     
     // setters
     set codigo(codigo) {
@@ -77,6 +87,12 @@ export default class Productoo{
     set precio(precio) {
         this.#precio = precio;
     }
+    set stock(stock) {
+        this.#stock = stock;
+    }
+    set categoria(categoria) {
+        this.#categoria = categoria;
+    }
 
 
     toJSON(){
@@ -89,6 +105,8 @@ export default class Productoo{
             anioLanzamiento: this.anioLanzamiento,
             marca: this.marca,
             precio: this.precio,
+            stock: this.stock,
+            categoria: this.categoria
         }
     }
 }
