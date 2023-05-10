@@ -11,6 +11,8 @@ const marca = document.getElementById("marca");
 const precio = document.getElementById("precio");
 const imagen = document.getElementById("imagen");
 const talles = document.getElementById("talles");
+const stock = document.getElementById("stock");
+const categoria = document.getElementById("categoria");
 const msjFormulario = document.getElementById("msjFormulario");
 const modalProducto = new bootstrap.Modal(
   document.querySelector("#modalAgregar")
@@ -70,6 +72,8 @@ function crearProducto() {
     anioLanzamiento.value,
     marca.value,
     precio.value,
+    stock.value,
+    categoria.value,
   );
   if (sumario.length === 0) {
     console.log("creando el producto...");
@@ -83,6 +87,8 @@ function crearProducto() {
       anioLanzamiento.value,
       marca.value,
       precio.value,
+      stock.value,
+      categoria.value,
     );
     listaProductos.push(nuevoProducto);
     console.log(nuevoProducto);
@@ -149,8 +155,7 @@ window.borrarProducto = (codigo) => {
   });
 };
 
-window.editarProducto= (codigoUnico) => {
-
+window.editarProducto = (codigoUnico) => {
   const producto = listaProductos.find((produc) => produc.codigo === codigoUnico);
   console.log(producto);
   modalProducto.show();
@@ -163,9 +168,10 @@ window.editarProducto= (codigoUnico) => {
   anioLanzamiento.value = producto.anioLanzamiento;
   marca.value = producto.marca;
   precio.value = producto.precio;
+  stock.value = producto.stock; // Asignar valor de stock
+  categoria.value = producto.categoria; // Asignar valor de categoria
 
-
-  estadoProducto= false;      
+  estadoProducto = false;
 };
 
 
@@ -180,6 +186,8 @@ listaProductos[posicionProducto].talles = talles.value;
 listaProductos[posicionProducto].anioLanzamiento = anioLanzamiento.value;
 listaProductos[posicionProducto].marca = marca.value;
 listaProductos[posicionProducto].precio = precio.value;
+listaProductos[posicionProducto].stock = stock.value;
+listaProductos[posicionProducto].categoria = categoria.value;
 
 
 guardarEnLocalStorage();
