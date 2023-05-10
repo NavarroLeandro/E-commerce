@@ -70,6 +70,20 @@ main {
   #contenedor-detalles article figure {
     width: 100%;
   }
+
+  /*quitar borde redondeado a las cards*/
+  .card {
+    border-radius: 0;
+  }
+
+  .card img{
+    height: 28rem;
+  }
+
+  .btn{
+    border-radius: 0%;
+  }
+
 }
 
 /*Dispositivos medianos*/
@@ -289,7 +303,33 @@ main {
   align-items: center;
   color: #000000;
 }
-.opcionesDetalles li:hover{
-  background:#ffffff;
+.opcionesDetalles li:hover {
+  background: #ffffff;
 }
 
+/* Estilos generales */
+.containerCategoria {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contenedor-secundario-categorias-productos a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Por defecto, 1 imagen por fila en dispositivos pequeños */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#contenedor-secundario-categorias-productos img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media queries para dispositivos medianos y grandes */
+@media (min-width: 768px) {
+  #contenedor-secundario-categorias-productos a {
+    width: 50%; /* 2 imágenes por fila en dispositivos medianos y grandes */
+  }
+}
