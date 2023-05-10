@@ -1,6 +1,19 @@
 # **E-commerce Funcional: StreetWear**
 
-En este repositorio encontraran una pagina que utiliza tanto HTML, CSS y JS y tiene la posibilidad de administrar productos, sacando o agregando los mismos, ademas de tambien poder buscarlos en el buscador como de tambien loguearse para poder acceder a las funciones de administrador.
+Este es un proyecto que hemos desarrollado como parte de nuestra formación en programación. Se trata de una tienda de ropa urbana, en la que se pueden comprar prendas de vestir de estilo callejero.
+
+La tienda se ha diseñado utilizando tecnologías web modernas, como HTML, CSS y JavaScript. También hemos utilizado Bootstrap como framework para facilitar el diseño responsivo y adaptativo.
+
+En el sitio web se pueden encontrar las siguientes secciones:
+
+- Carrusel de imágenes: se muestra una selección de productos destacados.
+- Categorías: se pueden ver todas las categorías de productos disponibles.
+- Filtrar productos: se pueden filtrar los productos según su nombre.
+
+La tienda se ha diseñado para ser muy visual y fácil de usar, con un enfoque en la experiencia del usuario. Se ha cuidado la estética del sitio para que se adapte al estilo urbano de las prendas que se venden.
+
+Para ejecutar el proyecto, solo es necesario abrir el archivo index.html en un navegador web. También se puede acceder al sitio web en línea en la siguiente dirección:
+- https://streetwear-ecommerce.netlify.app/
 
 >## Integrantes del proyecto:
 - Tadeo Muñoz [GitHub](https://github.com/teoMunoz99)
