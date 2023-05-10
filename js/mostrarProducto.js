@@ -42,7 +42,7 @@ function crearCard(producto) {
           <h5 class="card-title">${producto.nombrePrenda}</h5>
         </div>
         <div class="card-footer">
-            <button class="btn btn-primary" onclick="detallePelicula('${producto.codigo}')">Detalle</button>
+            <a href="../pages/error404.html" class="btn btn-dark" onclick="detallePelicula('${producto.codigo}')">Hazlo Tuyo</a>
         </div>
       </div>
     </article>`;
