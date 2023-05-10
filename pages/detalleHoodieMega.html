@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+  <body onload="hideItemIfNotLoggedIn();">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        name="description"
+        content="Encuentra las mejores marcas de ropa urbana en nuestra tienda online. Desde chaquetas hasta zapatillas, tenemos una amplia selección de prendas para que puedas crear el look perfecto. Compra ahora y obtén envío gratis en pedidos mayores a $30.000."
+      />
+      <meta
+        name="keywords"
+        content="Streetwear, moda urbana, ropa de calle, tendencias de moda, estilo de vida urbano, cultura urbana, marca de ropa urbana, diseño de ropa urbana, colección de streetwear, moda callejera, ropa informal, ropa de moda para jóvenes, accesorios de streetwear, influencias de la moda urbana, estilo de moda para la ciudad."
+      />
+      <meta
+        name="author"
+        content="Leandro Navarro, Anthony Hildebrand, Agustin Sandoval, Tadeo Muñoz, Exequiel Vega"
+      />
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+        crossorigin="anonymous"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      />
+      <link rel="stylesheet" href="../css/style.css" />
+      <link rel="icon" href="./img/miniLogo.JPG" />
+      <title>StreetWear&REG;</title>
+    </head>
+
+    <header>
+      <!--Banner con descuentos-->
+      <section
+        id="carouselExampleSlidesOnly"
+        class="carousel slide bg-black text-white"
+        data-bs-ride="carousel"
+      >
+        <article class="carousel-inner p-1">
+          <div class="carousel-item active">
+            <p class="m-0 text-center">ENVÍOS BONIFICADOS + $30.000.-</p>
+          </div>
+          <div class="carousel-item">
+            <p class="m-0 text-center">ENVÍOS EXPRESS A TUC 24HS</p>
+          </div>
+          <div class="carousel-item">
+            <p class="m-0 text-center">HASTA 6 CUOTAS S/INTERÉS</p>
+          </div>
+        </article>
+      </section>
+      <!--Nav-->
+      <nav class="navbar navbar-expand-lg">
+        <section class="container justify-content-between">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="logo fuenteLogo" href="../index.html">
+            <h1><u>StreetWear</u></h1>
+          </a>
+          <article class="iconosDelNav order-lg-1">
+            <a href="#"><i class="bi bi-person-fill"></i></a>
+            <a href="#"><i class="bi bi-cart-plus-fill"></i></a>
+          </article>
+          <article class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1 justify-content-center paddingNav"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Coleccíon
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Otoño</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Invierno</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Primavera</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Verano</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Artistas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+              <li class="nav-item" id="itemToHide">
+                <a
+                  class="nav-link"
+                  href="./administracion.html"
+                  id="admin-nav-item"
+                  >Administracion</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                id="buscador"
+                class="me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+                maxlength="30"
+              />
+              <button class="bg-transparent ms-2" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+          </article>
+        </section>
+      </nav>
+    </header>
+    <main class="container py-5">
+      <section id="contenedor-detalles" class="row">
+        <article class="col-12 col-md-6">
+          <figure>
+            <img
+              id="imagenesDetalles"
+              src="../img/hoodiesDetalles/hoodieMegaMujerParteFrontal.png"
+              alt=" Imagen del hoodie mega"
+              class="w-100"
+            />
+          </figure>
+        </article>
+        <article
+          id="contenedor-detalles-derecha"
+          class="container col-12 col-md-6"
+        >
+          <h4 class="mt-3" style="font-size: x-large">
+            <b>HOODIE MEGA [OFF WHITE]</b>
+          </h4>
+          <p style="color: grey">(16 en stock)</p>
+          <p class="mt-3" style="color: black; font-size: medium">
+            Hoodie de tela friza 100% algodon oversize con capucha ajustable y
+            con cierres en los bolsillos.
+          </p>
+          <h5 class="mt-3 mb-3" style="font-size: large">$32.000</h5>
+          <div class="dropdownDetalles">
+            <div class="selecccion-btn">
+              <span style="color: #c7c7c7">SELECCIONAR TALLE</span>
+              <i class="bi bi-caret-down-fill" style="color: #c7c7c7"></i>
+            </div>
+            <div class="content">
+              <ul class="opcionesDetalles"></ul>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="comoMedirseModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <img
+                    src="../img/comoMeMido.png"
+                    alt="Imagen de como medirse la ropa"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="guiaDeTallesModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <img
+                    src="../img/hoodiesDetalles/guiaDeTallesHoodieMega.jpg"
+                    alt="Imagen de guia de talles del hoodie mega"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="talles">
+            <button
+              type="button"
+              class="btn btn-sm mb-1"
+              data-bs-target="#guiaDeTallesModal"
+              data-bs-toggle="modal"
+            >
+              <i class="bi bi-zoom-in" id="lupaDetalles"></i>VER GUIA DE TALLES
+            </button>
+            <button
+              type="button"
+              class="btn btn-sm mb-1"
+              data-bs-target="#comoMedirseModal"
+              data-bs-toggle="modal"
+            >
+              <i class="bi bi-arrows-angle-expand" id="flechasDetalles"></i>COMO
+              ME MIDO
+            </button>
+          </div>
+
+          <button type="button" id="botonDetalles" class="mt-3">
+            AGREGAR AL CARRITO
+          </button>
+          <div id="cuotasDetalles">
+            <strong>
+              <p class="mt-3" style="color: rgb(190, 11, 11)">
+                6 cuotas sin interes
+              </p>
+            </strong>
+            <strong>
+              <p class="mt-3 ms-1">de $5.333</p>
+            </strong>
+          </div>
+          <div id="envioDetalles">
+            <i class="bi bi-truck" style="font-size: x-large"></i>
+            <strong
+              ><p class="ms-2 mt-2">
+                Envio gratis superando los $25.000
+              </p></strong
+            >
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="container">
+      <!--Section con contactos y formulario-->
+      <section class="p-4 row">
+        <article class="col-12 col-md-4">
+          <form class="ps-0 ps-lg-5">
+            <fieldset>
+              <legend>
+                <h2 class="fuenteLogo"><u>StreetWear</u></h2>
+              </legend>
+              <div class="mb-2">
+                <label for="floatingInput" class="mb-1">Ingrese su email</label>
+                <input
+                  type="email"
+                  class="w-100"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                  maxlength="30"
+                  required
+                />
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <label for="check" class="me-2"
+                  >¿Quieres recibir ofertas?</label
+                >
+                <input type="checkbox" id="check" />
+              </div>
+              <button type="submit">Enviar</button>
+            </fieldset>
+          </form>
+        </article>
+        <article class="my-5 my-md-0 col-12 col-md-4">
+          <ul class="ps-0 ps-lg-5 p-0 m-0">
+            <li class="">
+              <h5 class="mb-0">Ventas:</h5>
+              <a
+                href="mailto:ventas@streetwear.com"
+                class="text-decoration-none text-black"
+                >ventas@streetwear.com</a
+              >
+            </li>
+            <li class="d-flex flex-column my-3">
+              <h5 class="m-0">Atención al cliente:</h5>
+              <a href="tel:3810000000" class="text-decoration-none text-black"
+                >3810000000</a
+              >
+              <a
+                href="mailto:ayuda@streetwear.com"
+                class="text-decoration-none text-black"
+                >ayuda@streetwear.com</a
+              >
+            </li>
+            <li class="">
+              <h5 class="m-0">Trabajá con nosotros:</h5>
+              <a
+                href="mailto:rrhh@streetwear.com"
+                class="text-decoration-none text-black"
+                >rrhh@streetwear.com</a
+              >
+            </li>
+          </ul>
+        </article>
+        <article class="col-12 col-md-4">
+          <ul class="ps-0 ps-lg-5 p-0 m-0">
+            <li class="mb-1">
+              <a href="#" class="text-decoration-none text-black"
+                >Como comprar</a
+              >
+            </li>
+            <li class="mb-1">
+              <a href="#" class="text-decoration-none text-black"
+                >Cambios & devoluciones</a
+              >
+            </li>
+            <li class="mb-1">
+              <a href="#" class="text-decoration-none text-black">Envíos</a>
+            </li>
+            <li class="mb-1">
+              <a href="#" class="text-decoration-none text-black">Pagos</a>
+            </li>
+            <li class="mb-1">
+              <a href="#" class="text-decoration-none text-black"
+                >Preguntas frecuentes</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+      <!--Redes-->
+      <section class="my-5">
+        <article class="fs-1 d-flex justify-content-around">
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-youtube"></i>
+          <i class="bi bi-pinterest"></i>
+        </article>
+      </section>
+      <!--Copy-->
+      <section>
+        <article class="text-center">
+          <p>
+            <small
+              >&COPY;Copyright StreetWear | Ropa sin género para humanos. -
+              2023. Todos los derechos reservados.</small
+            >
+          </p>
+          <p>
+            <small
+              >Defensa de las y los consumidores. Para reclamos
+              <a href="#" class="text-decoration-none text-dark"
+                ><strong>ingrese aquí</strong></a
+              ></small
+            >
+          </p>
+        </article>
+      </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/funcionesDetalles.js"></script>
+    <script src="../js/verificarSesion.js"></script>
+  </body>
+</html>

@@ -1,13 +1,335 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bokor&display=swap");
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
   flex-grow: 1;
 }
 
+/*Dispositivos pequeños*/
+@media all and (min-width: 375px) {
+  /*con esto cambio el tamaño del banner superior de publicidad*/
+  #carouselExampleSlidesOnly {
+    font-size: 0.7rem;
+  }
+  /*cambia el tamaño y el color de los iconos del nav*/
+  .iconosDelNav a {
+    color: black;
+    font-size: 1.8rem;
+    margin-left: 0.5rem;
+  }
+  /*cambia la fuente del logo*/
+  .fuenteLogo {
+    font-family: "Bokor", cursive;
+  }
+  /*cambia el color y el tamaño del logo*/
+  .logo {
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
+  }
+
+  /*con esto quito los bordes redondeados a los botones del navbar*/
+  .dropdown-menu {
+    border-radius: 0 !important;
+  }
+
+  .navbar-toggler {
+    border-color: transparent;
+    border-radius: 0;
+  }
+  /*con esto doy estilo al boton del formulario de ofertas*/
+  footer button {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 0.8rem;
+    width: 6rem;
+  }
+  /*quita el estilo de lista*/
+  footer ul {
+    list-style: none;
+  }
+
+  .espacioLetras {
+    letter-spacing: 0.4rem;
+  }
+  /*pagina de detalles*/
+  #envioDetalles {
+    font-size: small;
+  }
+  #cuotasDetalles {
+    font-size: small;
+  }
+  #contenedor-detalles article figure {
+    width: 100%;
+  }
+
+  /*quitar borde redondeado a las cards*/
+  .card {
+    border-radius: 0;
+  }
+
+  .card img{
+    height: 28rem;
+  }
+
+  .btn{
+    border-radius: 0%;
+  }
+
+}
+
+/*Dispositivos medianos*/
+@media all and (min-width: 768px) {
+  /*con esto cambio el tamaño del banner superior de publicidad*/
+  #carouselExampleSlidesOnly {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  /*pagina de detalles*/
+  #envioDetalles {
+    font-size: medium;
+  }
+  #cuotasDetalles {
+    font-size: medium;
+  }
+  #contenedor-detalles article figure {
+    width: 100%;
+  }
+}
+
+/*Dispositivos grandes*/
+@media all and (min-width: 1200px) {
+  /*con esta clase alineo el nav*/
+  .paddingNav {
+    padding-left: 16%;
+  }
+}
+/*PARTE DE DETALLES*/
+#flechasDetalles {
+  margin-right: 20px;
+}
+#lupaDetalles {
+  margin-right: 20px;
+}
+#botonDetalles {
+  position: relative;
+  background-color: #000000;
+  border: none;
+  font-size: 15px;
+  color: #c7c7c7;
+  padding: 7px;
+  width: 93%;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+#botonDetalles:after {
+  content: "";
+  background: #797979;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 2s;
+}
+#botonDetalles:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+#cuotasDetalles {
+  display: flex;
+}
+#envioDetalles {
+  display: flex;
+  justify-content: start;
+}
+.dropdownDetalles {
+  width: 300px;
+  margin-bottom: 1em;
+}
+.selecccion-btn {
+  height: 30px;
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 2px;
+  background: #000000;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+.selecccion-btn i {
+  font-size: 15px;
+  transition: transform 0.3s linear;
+}
+.dropdownDetalles.active .selecccion-btn i {
+  transform: rotate(-180deg);
+}
+.content {
+  display: none;
+  padding: 5px;
+  margin-top: 7px;
+  border-radius: 2px;
+  background: #ffffff;
+  position: relative;
+  width: 285px;
+  margin-left: 15px;
+}
+.dropdownDetalles.active .content {
+  display: block;
+}
+.content .opcionesDetalles {
+  margin-top: 0px;
+  max-height: 130px;
+}
+.opcionesDetalles li {
+  height: 25px;
+  font-size: 13px;
+  border-radius: 5px;
+  list-style: none;
+  cursor: pointer;
+  align-items: center;
+  color: #000000;
+}
+.opcionesDetalles li:hover {
+  background: #ffffff;
+}
+/*PARTE DE DETALLES*/
+#flechasDetalles {
+  margin-right: 20px;
+}
+#lupaDetalles {
+  margin-right: 20px;
+}
+#botonDetalles {
+  position: relative;
+  background-color: #000000;
+  border: none;
+  font-size: 15px;
+  color: #c7c7c7;
+  padding: 7px;
+  width: 93%;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+#botonDetalles:after {
+  content: "";
+  background: #797979;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 2s;
+}
+#botonDetalles:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+#cuotasDetalles {
+  display: flex;
+}
+#envioDetalles {
+  display: flex;
+  justify-content: start;
+}
+.dropdownDetalles {
+  width: 300px;
+  margin-bottom: 1em;
+}
+.selecccion-btn {
+  height: 30px;
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 2px;
+  background: #000000;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+.selecccion-btn i {
+  font-size: 15px;
+  transition: transform 0.3s linear;
+}
+.dropdownDetalles.active .selecccion-btn i {
+  transform: rotate(-180deg);
+}
+.content {
+  display: none;
+  padding: 5px;
+  margin-top: 7px;
+  border-radius: 2px;
+  background: #ffffff;
+  position: relative;
+  width: 285px;
+  margin-left: 15px;
+}
+.dropdownDetalles.active .content {
+  display: block;
+}
+.content .opcionesDetalles {
+  margin-top: 0px;
+  max-height: 130px;
+}
+.opcionesDetalles li {
+  height: 25px;
+  font-size: 13px;
+  border-radius: 5px;
+  list-style: none;
+  cursor: pointer;
+  align-items: center;
+  color: #000000;
+}
+.opcionesDetalles li:hover {
+  background: #ffffff;
+}
+
+/* Estilos generales */
+.containerCategoria {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contenedor-secundario-categorias-productos a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Por defecto, 1 imagen por fila en dispositivos pequeños */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#contenedor-secundario-categorias-productos img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media queries para dispositivos medianos y grandes */
+@media (min-width: 768px) {
+  #contenedor-secundario-categorias-productos a {
+    width: 50%; /* 2 imágenes por fila en dispositivos medianos y grandes */
+  }
+}
